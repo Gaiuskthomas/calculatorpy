@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glass Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="calculator-card">
+        <form method="POST" id="calc-form">
+            <input type="text" name="expression" id="display" value="{{ result }}" placeholder="0" readonly>
+            
+            <div class="button-grid">
+                <button type="button" class="btn-clear" onclick="clearDisplay()">AC</button>
+                <button type="button" class="btn-op" onclick="addToDisplay('/')">÷</button>
+                <button type="button" class="btn-op" onclick="addToDisplay('*')">×</button>
+                <button type="button" class="btn-op" onclick="backspace()">⌫</button>
+
+                <button type="button" onclick="addToDisplay('7')">7</button>
+                <button type="button" onclick="addToDisplay('8')">8</button>
+                <button type="button" onclick="addToDisplay('9')">9</button>
+                <button type="button" class="btn-op" onclick="addToDisplay('-')">−</button>
+
+                <button type="button" onclick="addToDisplay('4')">4</button>
+                <button type="button" onclick="addToDisplay('5')">5</button>
+                <button type="button" onclick="addToDisplay('6')">6</button>
+                <button type="button" class="btn-op" onclick="addToDisplay('+')">+</button>
+
+                <button type="button" onclick="addToDisplay('1')">1</button>
+                <button type="button" onclick="addToDisplay('2')">2</button>
+                <button type="button" onclick="addToDisplay('3')">3</button>
+                <button type="submit" class="btn-equal">=</button>
+
+                <button type="button" class="btn-zero" onclick="addToDisplay('0')">0</button>
+                <button type="button" onclick="addToDisplay('.')">.</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const display = document.getElementById('display');
+        function addToDisplay(value) { display.value += value; }
+        function clearDisplay() { display.value = ''; }
+        function backspace() { display.value = display.value.slice(0, -1); }
+    </script>
+</body>
+</html>
