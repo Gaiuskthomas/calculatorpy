@@ -3,7 +3,7 @@
 A sleek, modern web-based calculator built with Python (Flask) and Custom CSS. This project demonstrates the "Glassmorphism" design trend using backdrop-filter and real-time backend calculation logic.
 
 🚀 Live Demo
-You can view the live application here: []
+You can view the live application here: [calculatorpy.onrender.com]
 
 ✨ Features
 Modern UI: Frosted glass effect with soft shadows and rounded corners.
@@ -25,7 +25,7 @@ Version Control: Git & GitHub
 
 📂 Project Structure
 Plaintext
-glass-calculator/
+calculatorpy/
 ├── app.py           # Flask application logic
 ├── requirements.txt # Project dependencies
 ├── static/          # CSS and assets
